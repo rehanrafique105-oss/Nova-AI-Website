@@ -1,84 +1,89 @@
-<!-- FAQ -->
-<section class="faq-section" id="faq">
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
 
     <div class="container">
 
         <h2 class="section-title">
-            Frequently Asked Questions
+            Contact Nova AI
         </h2>
 
         <p class="section-text">
-            Find answers to common questions about Nova AI.
+            Have a question or suggestion? Send us a message.
         </p>
 
-        <div class="faq-container">
+        <div class="contact-box">
 
-            <details class="faq-item">
-                <summary>What is Nova AI?</summary>
-                <p>
-                    Nova AI is a modern AI assistant designed to
-                    help with learning, productivity, writing,
-                    coding and digital tasks.
-                </p>
-            </details>
+            <form onsubmit="sendContact(event)">
 
-            <details class="faq-item">
-                <summary>Can I use Nova AI for learning?</summary>
-                <p>
-                    Yes. Nova AI can help you understand topics,
-                    organize study plans and practice new skills.
-                </p>
-            </details>
+                <input
+                    type="text"
+                    id="contactName"
+                    placeholder="Your Name"
+                    required
+                >
 
-            <details class="faq-item">
-                <summary>Can Nova AI help with coding?</summary>
-                <p>
-                    Yes. You can use the AI chat interface to learn
-                    programming concepts and get coding guidance.
-                </p>
-            </details>
+                <input
+                    type="email"
+                    id="contactEmail"
+                    placeholder="Your Email"
+                    required
+                >
 
-            <details class="faq-item">
-                <summary>Is Nova AI available on mobile?</summary>
-                <p>
-                    The website is designed to work on both desktop
-                    and mobile screens.
-                </p>
-            </details>
+                <textarea
+                    id="contactMessage"
+                    placeholder="Write your message..."
+                    rows="6"
+                    required
+                ></textarea>
+
+                <button type="submit" class="login-submit">
+                    Send Message 🚀
+                </button>
+
+            </form>
 
         </div>
 
     </div>
-/* FAQ */
+/* CONTACT */
 
-.faq-container{
-    max-width:800px;
+.contact-box{
+    max-width:700px;
     margin:auto;
-}
-
-.faq-item{
+    padding:30px;
     background:#0f172a;
     border:1px solid #1e293b;
-    border-radius:15px;
+    border-radius:22px;
+}
+
+.contact-box input,
+.contact-box textarea{
+    width:100%;
+    padding:15px;
     margin-bottom:15px;
-    padding:20px;
-}
-
-.faq-item summary{
-    cursor:pointer;
-    font-size:18px;
-    font-weight:bold;
+    border:1px solid #334155;
+    border-radius:12px;
+    background:#070b18;
     color:#fff;
+    outline:none;
+    resize:vertical;
 }
 
-.faq-item p{
-    color:#94a3b8;
-    margin-top:15px;
-    padding-top:15px;
-    border-top:1px solid #1e293b;
-}
-
-.faq-item:hover{
+.contact-box input:focus,
+.contact-box textarea:focus{
     border-color:#8b5cf6;
 }
 </section>
+function sendContact(event){
+
+    event.preventDefault();
+
+    const name = document.getElementById("contactName").value;
+
+    alert(
+        "Thank you, " + name +
+        "! Your message has been received. 🚀"
+    );
+
+    event.target.reset();
+}
