@@ -1,99 +1,12 @@
-<script>
-function sendMessage() {
-    const input = document.getElementById("userInput");
-    const messages = document.getElementById("messages");
+function toggleTheme() {
 
-    const text = input.value.trim();
+    document.body.classList.toggle("light-mode");
 
-    if (text === "") return;
+    const button = document.getElementById("themeButton");
 
-    // User message
-    const userMessage = document.createElement("div");
-    userMessage.className = "message user-message";
-    userMessage.textContent = text;
-
-    messages.appendChild(userMessage);
-    input.value = "";
-
-    // Typing message
-    const typing = document.createElement("div");
-    typing.className = "message ai-message";
-    typing.textContent = "Nova AI is thinking... 🤔";
-
-    messages.appendChild(typing);
-
-    messages.scrollTop = messages.scrollHeight;
-
-    setTimeout(() => {
-        typing.remove();
-
-        const aiMessage = document.createElement("div");
-        aiMessage.className = "message ai-message";
-
-        let reply = getNovaReply(text);
-
-        aiMessage.textContent = reply;
-        messages.appendChild(aiMessage);
-
-        messages.scrollTop = messages.scrollHeight;
-    }, 800);
-}
-
-
-function getNovaReply(text) {
-
-    const message = text.toLowerCase();
-
-    if (
-        message.includes("hello") ||
-        message.includes("hi") ||
-        message.includes("salam")
-    ) {
-        return "Hello! 👋 Welcome to Nova AI. How can I help you today?";
-    }
-
-    if (message.includes("who are you")) {
-        return "I'm Nova AI 🤖, your intelligent digital assistant.";
-    }
-
-    if (message.includes("html")) {
-        return "HTML is used to create the structure of websites. 🌐";
-    }
-
-    if (message.includes("css")) {
-        return "CSS is used to design and style websites. 🎨";
-    }
-
-    if (message.includes("javascript")) {
-        return "JavaScript makes websites interactive and dynamic. ⚡";
-    }
-
-    if (message.includes("freelancing")) {
-        return "Freelancing lets you provide your skills online to clients. 💼";
-    }
-
-    if (message.includes("blog")) {
-        return "For blogging, choose a topic, research it, create useful content and publish consistently. ✍️";
-    }
-
-    if (message.includes("study") || message.includes("learn")) {
-        return "A good way to learn is to study one topic at a time and practice it with small projects. 📚";
-    }
-
-    if (
-        message.includes("thank") ||
-        message.includes("thanks")
-    ) {
-        return "You're welcome! 😊";
-    }
-
-    return "That's an interesting question! 🚀 Nova AI is ready to help you explore, learn and create.";
-}
-
-
-function handleKey(event) {
-    if (event.key === "Enter") {
-        sendMessage();
+    if (document.body.classList.contains("light-mode")) {
+        button.textContent = "☀️";
+    } else {
+        button.textContent = "🌙";
     }
 }
-</script>
