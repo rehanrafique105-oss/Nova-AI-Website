@@ -1,95 +1,84 @@
-/* LOGIN */
+<!-- FAQ -->
+<section class="faq-section" id="faq">
 
-.login-btn{
-    padding:10px 20px;
-    border:1px solid #8b5cf6;
-    border-radius:25px;
-    color:#fff;
-    margin-left:10px;
-    transition:.3s;
+    <div class="container">
+
+        <h2 class="section-title">
+            Frequently Asked Questions
+        </h2>
+
+        <p class="section-text">
+            Find answers to common questions about Nova AI.
+        </p>
+
+        <div class="faq-container">
+
+            <details class="faq-item">
+                <summary>What is Nova AI?</summary>
+                <p>
+                    Nova AI is a modern AI assistant designed to
+                    help with learning, productivity, writing,
+                    coding and digital tasks.
+                </p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Can I use Nova AI for learning?</summary>
+                <p>
+                    Yes. Nova AI can help you understand topics,
+                    organize study plans and practice new skills.
+                </p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Can Nova AI help with coding?</summary>
+                <p>
+                    Yes. You can use the AI chat interface to learn
+                    programming concepts and get coding guidance.
+                </p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Is Nova AI available on mobile?</summary>
+                <p>
+                    The website is designed to work on both desktop
+                    and mobile screens.
+                </p>
+            </details>
+
+        </div>
+
+    </div>
+/* FAQ */
+
+.faq-container{
+    max-width:800px;
+    margin:auto;
 }
 
-.login-btn:hover{
-    background:#8b5cf6;
-}
-
-.login-section{
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:120px 20px 80px;
-    background:
-    radial-gradient(circle at 50% 20%,rgba(139,92,246,.20),transparent 35%),
-    #070b18;
-}
-
-.login-box{
-    width:100%;
-    max-width:430px;
-    padding:35px;
+.faq-item{
     background:#0f172a;
     border:1px solid #1e293b;
-    border-radius:25px;
-    box-shadow:0 20px 60px rgba(0,0,0,.35);
+    border-radius:15px;
+    margin-bottom:15px;
+    padding:20px;
 }
 
-.login-box h2{
-    text-align:center;
-    font-size:32px;
-    margin-bottom:8px;
-}
-
-.login-box .login-subtitle{
-    text-align:center;
-    color:#94a3b8;
-    margin-bottom:28px;
-}
-
-.login-box label{
-    display:block;
-    margin:15px 0 7px;
-    color:#cbd5e1;
-}
-
-.login-box input{
-    width:100%;
-    padding:14px;
-    border-radius:12px;
-    border:1px solid #334155;
-    background:#070b18;
+.faq-item summary{
+    cursor:pointer;
+    font-size:18px;
+    font-weight:bold;
     color:#fff;
-    outline:none;
 }
 
-.login-box input:focus{
+.faq-item p{
+    color:#94a3b8;
+    margin-top:15px;
+    padding-top:15px;
+    border-top:1px solid #1e293b;
+}
+
+.faq-item:hover{
     border-color:#8b5cf6;
 }
-
-.login-submit{
-    width:100%;
-    margin-top:25px;
-    padding:14px;
-    border:0;
-    border-radius:12px;
-    background:#8b5cf6;
-    color:#fff;
-    font-size:16px;
-    font-weight:bold;
-    cursor:pointer;
-}
-
-.login-submit:hover{
-    opacity:.9;
-}
-
-.signup-text{
-    text-align:center;
-    margin-top:22px;
-    color:#94a3b8;
-}
-
-.signup-text a{
-    color:#a78bfa;
-    font-weight:bold;
-}
+</section>
